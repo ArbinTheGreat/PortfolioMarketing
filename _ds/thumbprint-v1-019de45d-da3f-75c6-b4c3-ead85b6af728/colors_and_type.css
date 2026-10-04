@@ -1,0 +1,282 @@
+/* Thumbprint — Colors & Type
+ * Token values lifted from @thumbtack/thumbprint-tokens (tokens.ts) and
+ * thumbprint/app/guidelines/typography. SCSS names map to CSS vars below.
+ */
+
+/* ============================================================
+ * FONT FACE — Thumbtack Rise (variable, weights 100–900)
+ * ============================================================ */
+@font-face {
+    font-family: 'Rise';
+    src: url('fonts/ThumbtackRiseVF.woff2') format('woff2-variations'),
+         url('fonts/ThumbtackRiseVF.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    /* ============================================================
+     * COLOR — palette (raw tokens)
+     * ============================================================ */
+
+    /* Blue (interactive primary) */
+    --tp-color-blue-100: #eaf6fa;
+    --tp-color-blue-200: #b3ebff;
+    --tp-color-blue-300: #79d2f2;
+    --tp-color-blue:     #009fd9;
+    --tp-color-blue-500: #007fad;
+    --tp-color-blue-600: #005979;
+
+    /* Indigo */
+    --tp-color-indigo-100: #e8f1fd;
+    --tp-color-indigo-200: #cce1ff;
+    --tp-color-indigo-300: #96c2ff;
+    --tp-color-indigo:     #5968e2;
+    --tp-color-indigo-500: #4f54b3;
+    --tp-color-indigo-600: #383c80;
+
+    /* Purple */
+    --tp-color-purple-100: #f5efff;
+    --tp-color-purple-200: #dfccff;
+    --tp-color-purple-300: #c9acfd;
+    --tp-color-purple:     #8d56eb;
+    --tp-color-purple-500: #6637b6;
+    --tp-color-purple-600: #492782;
+
+    /* Green (success) */
+    --tp-color-green-100: #e1fdf3;
+    --tp-color-green-200: #c6f7da;
+    --tp-color-green-300: #73e4a2;
+    --tp-color-green:     #2db783;
+    --tp-color-green-500: #16855b;
+    --tp-color-green-600: #054e33;
+
+    /* Yellow (warning) */
+    --tp-color-yellow-100: #fdf7e7;
+    --tp-color-yellow-200: #ffebb3;
+    --tp-color-yellow-300: #ffdd80;
+    --tp-color-yellow:     #febe14;
+    --tp-color-yellow-500: #a77005;
+    --tp-color-yellow-600: #714601;
+
+    /* Red (caution / error) */
+    --tp-color-red-100: #ffeff0;
+    --tp-color-red-200: #ffd9d9;
+    --tp-color-red-300: #ffb0b0;
+    --tp-color-red:     #ff5a5f;
+    --tp-color-red-500: #b22d31;
+    --tp-color-red-600: #7d0d10;
+
+    /* Neutrals */
+    --tp-color-black:     #2f3033;
+    --tp-color-black-300: #676d73;
+    --tp-color-gray-200:  #fafafa;
+    --tp-color-gray-300:  #e9eced;
+    --tp-color-gray:      #d3d4d5;
+    --tp-color-white:     #ffffff;
+
+    /* Scrims */
+    --tp-scrim-light-80: rgba(255, 255, 255, 0.8);
+    --tp-scrim-dark-50:  rgba(0, 0, 0, 0.5);
+    --tp-scrim-dark-80:  rgba(0, 0, 0, 0.8);
+
+    /* ============================================================
+     * SEMANTIC COLOR
+     * ============================================================ */
+    --color-fg-1: var(--tp-color-black);        /* primary text */
+    --color-fg-2: var(--tp-color-black-300);    /* secondary text */
+    --color-fg-3: var(--tp-color-gray);         /* tertiary / disabled text */
+    --color-fg-link: var(--tp-color-blue);
+    --color-fg-link-hover: var(--tp-color-blue-500);
+    --color-fg-on-dark: var(--tp-color-white);
+
+    --color-bg: var(--tp-color-white);
+    --color-bg-subtle: var(--tp-color-gray-200);
+    --color-bg-muted: var(--tp-color-gray-300);
+    --color-bg-emphasis: var(--tp-color-black);
+
+    --color-border: var(--tp-color-gray);
+    --color-border-strong: var(--tp-color-black-300);
+    --color-border-focus: var(--tp-color-blue);
+
+    --color-success: var(--tp-color-green);
+    --color-success-bg: var(--tp-color-green-100);
+    --color-warning: var(--tp-color-yellow);
+    --color-warning-bg: var(--tp-color-yellow-100);
+    --color-danger: var(--tp-color-red);
+    --color-danger-bg: var(--tp-color-red-100);
+    --color-info: var(--tp-color-blue);
+    --color-info-bg: var(--tp-color-blue-100);
+
+    /* Brand */
+    --color-brand: var(--tp-color-blue);
+    --color-brand-strong: var(--tp-color-blue-500);
+
+    /* ============================================================
+     * TYPE — font families
+     * ============================================================ */
+    --font-family-body: 'Rise', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                        Roboto, Helvetica, Arial, sans-serif;
+    --font-family-display: var(--font-family-body);
+    --font-family-mono: 'Source Code Pro', 'Roboto Mono', SFMono-Regular,
+                        Menlo, Consolas, monospace;
+
+    /* ============================================================
+     * TYPE — scale (Title 1–8 + Body 1–3)
+     * Title sizes 1–3 are responsive; values here are desktop.
+     * ============================================================ */
+    --font-size-title-1: 28px;     --line-height-title-1: 32px;
+    --font-size-title-2: 24px;     --line-height-title-2: 28px;
+    --font-size-title-3: 22px;     --line-height-title-3: 28px;
+    --font-size-title-4: 20px;     --line-height-title-4: 28px;
+    --font-size-title-5: 18px;     --line-height-title-5: 24px;
+    --font-size-title-6: 16px;     --line-height-title-6: 24px;
+    --font-size-title-7: 14px;     --line-height-title-7: 20px;
+    --font-size-title-8: 12px;     --line-height-title-8: 18px;
+
+    --font-size-body-1: 16px;      --line-height-body-1: 24px;
+    --font-size-body-2: 14px;      --line-height-body-2: 20px;
+    --font-size-body-3: 12px;      --line-height-body-3: 18px;
+
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    /* ============================================================
+     * RADII (Border Radius)
+     * ============================================================ */
+    --radius-xs: 4px;
+    --radius-s: 6px;
+    --radius-m: 8px;
+    --radius-l: 12px;
+    --radius-xl: 16px;
+    --radius-xxl: 24px;
+    --radius-full: 50%;
+    --radius-pill: 9999px;
+
+    /* ============================================================
+     * SHADOWS (elevation)
+     * ============================================================ */
+    --shadow-100: 0px 1px 3px rgba(0, 0, 0, 0.10);
+    --shadow-200: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    --shadow-300: 0px 2px 7px rgba(0, 0, 0, 0.15);
+    --shadow-400: 0px 2px 10px rgba(0, 0, 0, 0.20);
+
+    /* ============================================================
+     * SPACING — Thumbprint uses a baseline scale (4 / 8 / 12 / 16 / 24 / 32 / 48)
+     * Tachyons-style atomic classes use this scale, e.g. m1 → 4px, m2 → 8px.
+     * ============================================================ */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --space-5: 32px;
+    --space-6: 48px;
+    --space-7: 64px;
+
+    /* ============================================================
+     * BREAKPOINTS (px values from tokens)
+     * ============================================================ */
+    --bp-small: 481px;
+    --bp-medium: 700px;
+    --bp-large: 1025px;
+}
+
+/* ============================================================
+ * SEMANTIC TYPE STYLES
+ * ============================================================ */
+.tp-title-1, h1 {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-title-1);
+    line-height: var(--line-height-title-1);
+    font-weight: 700;
+    color: var(--color-fg-1);
+    letter-spacing: -0.01em;
+}
+.tp-title-2, h2 {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-title-2);
+    line-height: var(--line-height-title-2);
+    font-weight: 700;
+    color: var(--color-fg-1);
+}
+.tp-title-3, h3 {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-title-3);
+    line-height: var(--line-height-title-3);
+    font-weight: 700;
+    color: var(--color-fg-1);
+}
+.tp-title-4, h4 {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-title-4);
+    line-height: var(--line-height-title-4);
+    font-weight: 700;
+    color: var(--color-fg-1);
+}
+.tp-title-5, h5 {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-title-5);
+    line-height: var(--line-height-title-5);
+    font-weight: 700;
+    color: var(--color-fg-1);
+}
+.tp-title-6, h6 {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-title-6);
+    line-height: var(--line-height-title-6);
+    font-weight: 700;
+    color: var(--color-fg-1);
+}
+.tp-title-7 {
+    font-size: var(--font-size-title-7);
+    line-height: var(--line-height-title-7);
+    font-weight: 700;
+    color: var(--color-fg-1);
+}
+.tp-title-8 {
+    font-size: var(--font-size-title-8);
+    line-height: var(--line-height-title-8);
+    font-weight: 700;
+    color: var(--color-fg-1);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.tp-body-1, p {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body-1);
+    line-height: var(--line-height-body-1);
+    font-weight: 400;
+    color: var(--color-fg-1);
+}
+.tp-body-2 {
+    font-size: var(--font-size-body-2);
+    line-height: var(--line-height-body-2);
+    color: var(--color-fg-1);
+}
+.tp-body-3, small {
+    font-size: var(--font-size-body-3);
+    line-height: var(--line-height-body-3);
+    color: var(--color-fg-2);
+}
+code, .tp-code {
+    font-family: var(--font-family-mono);
+    font-size: 0.95em;
+    background: var(--tp-color-gray-200);
+    padding: 1px 6px;
+    border-radius: var(--radius-xs);
+    color: var(--color-fg-1);
+}
+a {
+    color: var(--color-fg-link);
+    text-decoration: underline;
+}
+a:hover { color: var(--color-fg-link-hover); }
+
+/* Page baseline */
+html, body {
+    font-family: var(--font-family-body);
+    color: var(--color-fg-1);
+    background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+}
